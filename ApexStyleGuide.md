@@ -255,10 +255,13 @@ public class MyClass {
 ## Test Class Example
 
 ```java
-@isTest class AccountServiceTest {
+@isTest 
+private class AccountServiceTest {
 
     @isTest static void testSetAccountType() {
-        Account acct = new Account(Name='Test1');
+        Account acct = new Account(
+		Name = 'Test1',
+		AccountNumber = 'A123');
 
         Test.startTest();
 	
