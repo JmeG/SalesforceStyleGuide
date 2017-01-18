@@ -260,8 +260,8 @@ private class AccountServiceTest {
 
     @isTest static void testSetAccountType() {
         Account acct = new Account(
-		Name = 'Test1',
-		AccountNumber = 'A123');
+	    Name = 'Test1',
+	    AccountNumber = 'A123');
 
         Test.startTest();
 	
