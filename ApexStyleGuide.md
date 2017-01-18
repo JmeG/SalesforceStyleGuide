@@ -260,8 +260,8 @@ private class AccountServiceTest {
 
     @isTest static void testSetAccountType() {
         Account acct = new Account(
-	    Name = 'Test1',
-	    AccountNumber = 'A123');
+            Name = 'Test1',
+            AccountNumber = 'A123');
 
         Test.startTest();
 	
@@ -279,31 +279,31 @@ private class AccountServiceTest {
 
 ```java
 trigger AccountTrigger on Account (before insert, before update, before delete,
-								after insert, after update, after delete, after undelete) {
+                                    after insert, after update, after delete, after undelete) {
 
-	AccountTriggerHandler handler = new AccountTriggerHandler(Trigger.isExecuting, Trigger.size);
+    AccountTriggerHandler handler = new AccountTriggerHandler(Trigger.isExecuting, Trigger.size);
 
-	if (Trigger.isInsert && Trigger.isBefore) {
-		handler.onBeforeInsert(Trigger.new, Trigger.newMap);
-	}
-	else if (Trigger.isInsert && Trigger.isAfter) {
-		handler.onAfterInsert(Trigger.new, Trigger.newMap);
-	}
-	else if (Trigger.isUpdate && Trigger.isBefore) {
-		handler.onBeforeUpdate(Trigger.new, Trigger.newMap, Trigger.old, Trigger.oldMap);
-	}
-	else if (Trigger.isUpdate && Trigger.isAfter) {
-		handler.onAfterUpdate(Trigger.new, Trigger.newMap, Trigger.old, Trigger.oldMap);
-	}
-	else if (Trigger.isDelete && Trigger.isBefore) {
-		handler.onBeforeDelete(Trigger.old, Trigger.oldMap);
-	}
-	else if (Trigger.isDelete && Trigger.isAfter) {
-		handler.onAfterDelete(Trigger.old, Trigger.oldMap);
-	}
-	else if (Trigger.isUndelete) {
-		handler.onUndelete(Trigger.new);
-	}
+    if (Trigger.isInsert && Trigger.isBefore) {
+        handler.onBeforeInsert(Trigger.new, Trigger.newMap);
+    }
+    else if (Trigger.isInsert && Trigger.isAfter) {
+        handler.onAfterInsert(Trigger.new, Trigger.newMap);
+    }
+    else if (Trigger.isUpdate && Trigger.isBefore) {
+        handler.onBeforeUpdate(Trigger.new, Trigger.newMap, Trigger.old, Trigger.oldMap);
+    }
+    else if (Trigger.isUpdate && Trigger.isAfter) {
+        handler.onAfterUpdate(Trigger.new, Trigger.newMap, Trigger.old, Trigger.oldMap);
+    }
+    else if (Trigger.isDelete && Trigger.isBefore) {
+        handler.onBeforeDelete(Trigger.old, Trigger.oldMap);
+    }
+    else if (Trigger.isDelete && Trigger.isAfter) {
+        handler.onAfterDelete(Trigger.old, Trigger.oldMap);
+    }
+    else if (Trigger.isUndelete) {
+        handler.onUndelete(Trigger.new);
+    }
 } 
 ```
 
