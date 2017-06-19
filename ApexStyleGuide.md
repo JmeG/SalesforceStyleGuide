@@ -365,22 +365,6 @@ public with sharing class AccountTriggerHandler {
             // Call additional methods here
         }
     }
-
-    public Boolean IsTriggerContext {
-        get { return isExecutingFlag; }
-    }
-
-    public Boolean IsVisualforcePageContext {
-        get { return !IsTriggerContext; }
-    }
-
-    public Boolean IsWebServiceContext {
-        get { return !IsTriggerContext; }
-    }
-
-    public Boolean IsExecuteAnonymousContext {
-        get { return !IsTriggerContext; }
-    }
 } 
 
 ```
