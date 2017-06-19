@@ -258,7 +258,8 @@ public class MyClass {
 @isTest 
 private class AccountServiceTest {
 
-    @isTest static void testSetAccountType() {
+    @isTest 
+    static void testSetAccountType() {
         Account acct = new Account(
             Name = 'Test1',
             AccountNumber = 'A123');
