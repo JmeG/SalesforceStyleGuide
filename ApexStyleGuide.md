@@ -119,7 +119,7 @@ In a test method, use the `@isTest` attribute instead of the `testmethod` modifi
 <a name="capitalization"></a>
 ### Capitalization
 
-Follow the Java standard of capitalization with the listed exceptions.  That means that statements (`for`, `if`, etc.) should be lowercase, constants should be `UPPER_CASE_WITH_UNDERSCORES`, classes and class-level variables should be declared as `PascalCase`, and methods, parameters and local variables should all be declared as `camelCase`.
+Follow the Java standard of capitalization with the listed exceptions.  That means that statements (`for`, `if`, etc.) should be case, constants should be `UPPER_CASE_WITH_UNDERSCORES`, classes and class-level variables should be declared as `PascalCase`, and methods, parameters and local variables should all be declared as `camelCase`.
 
 Native Apex methods and classes should generally be referenced as written in official Salesforce documentation.  This means that schemas and classes are `PascalCase` and methods are `camelCase`.  The only deviation from this rule is `SObject` which should be written as such (in the documentation, it is usually written `sObject` which does not conform to this style guide and should not be used).
 
@@ -173,11 +173,11 @@ When writing test cases, always use `Test.startTest();` and `Test.stopTest();`. 
 
 <a name="class"></a>
 ### Class
-Name a class or trigger after what it does (e.g., `AccountTriggerHandler`). Controllers and Controller Extensions should end with the word `Controller`.  Use `UpperCamelCase`.
+Name a class or trigger after what it does (e.g., `AccountTriggerHandler`). Controllers and Controller Extensions should end with the word `Controller`.  Use `PascalCase`.
 
 <a name="trigger"></a>
 ### Trigger
-Name a trigger after the SObject it operates against.  Triggers should be named with a combination of the SObject type followed by the word `Trigger` (e.g., `AccountTrigger`, `OpportunityTrigger`, `SomeCustomObjectTrigger`).  Triggers should not contain any logic, that should be left to the Handler class. Use `UpperCamelCase`.
+Name a trigger after the SObject it operates against.  Triggers should be named with a combination of the SObject type followed by the word `Trigger` (e.g., `AccountTrigger`, `OpportunityTrigger`, `SomeCustomObjectTrigger`).  Triggers should not contain any logic, that should be left to the Handler class. Use `PascalCase`.
 
 <a name="methods"></a>
 ### Methods
